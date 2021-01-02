@@ -523,6 +523,8 @@ Rails.application.routes.draw do
   get '/about/more',   to: 'about#more'
   get '/terms',        to: 'about#terms'
 
+  get '/emojos',       to: 'emojos#index'
+
   match '/', via: [:post, :put, :patch, :delete], to: 'application#raise_not_found', format: false
   match '*unmatched_route', via: :all, to: 'application#raise_not_found', format: false
 end
